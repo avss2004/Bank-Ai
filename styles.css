@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('assets/bank-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 35px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #001122, #003087);
+    color: white;
+    position: relative;
+}
+
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 180px;
+    filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.6));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.15);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tabs {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.tab-btn {
+    padding: 18px 45px;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: white;
+    color: #001122;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.progress-bar {
+    width: 92%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    margin: 40px auto 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #fff, #00ccff);
+    width: 16.67%;
+    transition: width 0.9s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+.notifications {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: #001122;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 70px;
+    gap: 70px;
+}
+
+.avatar-section {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+#avatar-video {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 35px;
+    border: 8px solid #001122;
+    background: #000;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.speech-bubble {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #001122;
+    color: white;
+    padding: 30px 45px;
+    border-radius: 45px;
+    max-width: 380px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    animation: bounceIn 0.9s ease;
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: translateX(-50%) scale(0.4); }
+    60% { opacity: 1; transform: translateX(-50%) scale(1.25); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+.content-section {
+    flex: 2;
+}
+
+.tab-content {
+    display: none;
+    padding: 70px;
+    background: white;
+    border-radius: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    animation: slideIn 0.8s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: #001122;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+    font-size: 2rem;
+    color: #001122;
+    margin: 35px 0 25px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.step-video {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 30px;
+    margin-bottom: 45px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    margin: 25px 0;
+    font-size: 1.4rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.input-group label:hover {
+    color: #001122;
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 25px;
+    transform: scale(1.4);
+}
+
+.user-video {
+    width: 260px;
+    height: 200px;
+    border: 6px solid #ddd;
+    border-radius: 25px;
+    margin: 35px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    padding: 22px 50px;
+    background: #001122;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: #000d1a;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.small-btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+}
+
+.input, .input-file, select, textarea {
+    padding: 22px;
+    width: 100%;
+    max-width: 550px;
+    margin: 25px 0;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.input:focus, .input-file:focus, select:focus, textarea:focus {
+    border-color: #001122;
+    box-shadow: 0 0 15px rgba(0, 17, 34, 0.3);
+    outline: none;
+}
+
+.eform fieldset {
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    padding: 30px;
+    margin: 30px 0;
+    background: #f8f8f8;
+}
+
+.eform legend {
+    font-size: 1.6rem;
+    color: #001122;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+.result-text {
+    font-size: 1.8rem;
+    padding: 40px;
+    border-radius: 30px;
+    margin: 45px 0;
+    font-weight: 600;
+    border: 5px solid;
+}
+
+.result-text.approved {
+    background: #e6ffe6;
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.result-text.rejected {
+    background: #ffe6e6;
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.financial-health-score, .loan-comparison, .rewards {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f0f8ff;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: #001122;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.3rem;
+    border-top: 1px solid #f0f4f8;
+    background: #f7f7f7;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 35px;
+    }
+    .tabs {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .avatar-section {
+        margin-bottom: 60px;
+    }
+    .speech-bubble {
+        font-size: 1.3rem;
+        padding: 25px 35px;
+    }
+    .input, .input-file, select, textarea {
+        max-width: 100%;
+    }
+}
