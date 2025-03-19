@@ -1,0 +1,1 @@
+Thi is an web application which works on online ai banking like every component will be goin on in a virtual manner where ter eill be ai based virtual manager who will talk guide us what are the needs required and documents to be uploaded .
